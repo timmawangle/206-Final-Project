@@ -43,7 +43,8 @@ headers = {
 
 BASE_URL = 'https://api.spotify.com/v1/'
 playlist_id = '37i9dQZF1DXcBWIGoYBM5M'
-r = requests.get(BASE_URL + 'albums/' + playlist_id + '/tracks', headers=headers)
+r = requests.get(BASE_URL + 'playlists/' + playlist_id + '/tracks', headers=headers)
+r = r.json()
 print(r)
 
 def setUpDatabase(db_name):
