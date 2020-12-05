@@ -1,0 +1,272 @@
+{
+    "Wonder": {
+        "tracks": {
+            "href": "https://api.spotify.com/v1/search?query=Wonder&type=track&market=US&offset=0&limit=1",
+            "items": [
+                {
+                    "album": {
+                        "album_type": "single",
+                        "artists": [
+                            {
+                                "external_urls": {
+                                    "spotify": "https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr"
+                                },
+                                "href": "https://api.spotify.com/v1/artists/7n2wHs1TKAczGzO7Dd2rGr",
+                                "id": "7n2wHs1TKAczGzO7Dd2rGr",
+                                "name": "Shawn Mendes",
+                                "type": "artist",
+                                "uri": "spotify:artist:7n2wHs1TKAczGzO7Dd2rGr"
+                            }
+                        ],
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/album/7vif3nVzXURIrjGjHeHytB"
+                        },
+                        "href": "https://api.spotify.com/v1/albums/7vif3nVzXURIrjGjHeHytB",
+                        "id": "7vif3nVzXURIrjGjHeHytB",
+                        "images": [
+                            {
+                                "height": 640,
+                                "url": "https://i.scdn.co/image/ab67616d0000b2733d9621bb2904dc57a60a6b36",
+                                "width": 640
+                            },
+                            {
+                                "height": 300,
+                                "url": "https://i.scdn.co/image/ab67616d00001e023d9621bb2904dc57a60a6b36",
+                                "width": 300
+                            },
+                            {
+                                "height": 64,
+                                "url": "https://i.scdn.co/image/ab67616d000048513d9621bb2904dc57a60a6b36",
+                                "width": 64
+                            }
+                        ],
+                        "name": "Wonder",
+                        "release_date": "2020-10-02",
+                        "release_date_precision": "day",
+                        "total_tracks": 1,
+                        "type": "album",
+                        "uri": "spotify:album:7vif3nVzXURIrjGjHeHytB"
+                    },
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/7n2wHs1TKAczGzO7Dd2rGr",
+                            "id": "7n2wHs1TKAczGzO7Dd2rGr",
+                            "name": "Shawn Mendes",
+                            "type": "artist",
+                            "uri": "spotify:artist:7n2wHs1TKAczGzO7Dd2rGr"
+                        }
+                    ],
+                    "available_markets": [],
+                    "disc_number": 1,
+                    "duration_ms": 172692,
+                    "explicit": false,
+                    "external_ids": {
+                        "isrc": "USUM72018522"
+                    },
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/track/5KCbr5ndeby4y4ggthdiAb"
+                    },
+                    "href": "https://api.spotify.com/v1/tracks/5KCbr5ndeby4y4ggthdiAb",
+                    "id": "5KCbr5ndeby4y4ggthdiAb",
+                    "is_local": false,
+                    "is_playable": true,
+                    "name": "Wonder",
+                    "popularity": 92,
+                    "preview_url": null,
+                    "track_number": 1,
+                    "type": "track",
+                    "uri": "spotify:track:5KCbr5ndeby4y4ggthdiAb"
+                }
+            ],
+            "limit": 1,
+            "next": "https://api.spotify.com/v1/search?query=Wonder&type=track&market=US&offset=1&limit=1",
+            "offset": 0,
+            "previous": null,
+            "total": 100000
+        }
+    },
+    "positions": {
+        "tracks": {
+            "href": "https://api.spotify.com/v1/search?query=positions&type=track&market=US&offset=0&limit=1",
+            "items": [
+                {
+                    "album": {
+                        "album_type": "album",
+                        "artists": [
+                            {
+                                "external_urls": {
+                                    "spotify": "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR"
+                                },
+                                "href": "https://api.spotify.com/v1/artists/66CXWjxzNUsdJxJ2JdwvnR",
+                                "id": "66CXWjxzNUsdJxJ2JdwvnR",
+                                "name": "Ariana Grande",
+                                "type": "artist",
+                                "uri": "spotify:artist:66CXWjxzNUsdJxJ2JdwvnR"
+                            }
+                        ],
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/album/3euz4vS7ezKGnNSwgyvKcd"
+                        },
+                        "href": "https://api.spotify.com/v1/albums/3euz4vS7ezKGnNSwgyvKcd",
+                        "id": "3euz4vS7ezKGnNSwgyvKcd",
+                        "images": [
+                            {
+                                "height": 640,
+                                "url": "https://i.scdn.co/image/ab67616d0000b2735ef878a782c987d38d82b605",
+                                "width": 640
+                            },
+                            {
+                                "height": 300,
+                                "url": "https://i.scdn.co/image/ab67616d00001e025ef878a782c987d38d82b605",
+                                "width": 300
+                            },
+                            {
+                                "height": 64,
+                                "url": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                                "width": 64
+                            }
+                        ],
+                        "name": "Positions",
+                        "release_date": "2020-10-30",
+                        "release_date_precision": "day",
+                        "total_tracks": 14,
+                        "type": "album",
+                        "uri": "spotify:album:3euz4vS7ezKGnNSwgyvKcd"
+                    },
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/66CXWjxzNUsdJxJ2JdwvnR",
+                            "id": "66CXWjxzNUsdJxJ2JdwvnR",
+                            "name": "Ariana Grande",
+                            "type": "artist",
+                            "uri": "spotify:artist:66CXWjxzNUsdJxJ2JdwvnR"
+                        }
+                    ],
+                    "available_markets": [],
+                    "disc_number": 1,
+                    "duration_ms": 172324,
+                    "explicit": true,
+                    "external_ids": {
+                        "isrc": "USUM72019412"
+                    },
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/track/35mvY5S1H3J2QZyna3TFe0"
+                    },
+                    "href": "https://api.spotify.com/v1/tracks/35mvY5S1H3J2QZyna3TFe0",
+                    "id": "35mvY5S1H3J2QZyna3TFe0",
+                    "is_local": false,
+                    "is_playable": false,
+                    "name": "positions",
+                    "popularity": 97,
+                    "preview_url": null,
+                    "restrictions": {
+                        "reason": "explicit"
+                    },
+                    "track_number": 12,
+                    "type": "track",
+                    "uri": "spotify:track:35mvY5S1H3J2QZyna3TFe0"
+                }
+            ],
+            "limit": 1,
+            "next": "https://api.spotify.com/v1/search?query=positions&type=track&market=US&offset=1&limit=1",
+            "offset": 0,
+            "previous": null,
+            "total": 4311
+        }
+    },
+    "wish you were gay": {
+        "tracks": {
+            "href": "https://api.spotify.com/v1/search?query=wish+you+were+gay&type=track&market=US&offset=0&limit=1",
+            "items": [
+                {
+                    "album": {
+                        "album_type": "album",
+                        "artists": [
+                            {
+                                "external_urls": {
+                                    "spotify": "https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH"
+                                },
+                                "href": "https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH",
+                                "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                                "name": "Billie Eilish",
+                                "type": "artist",
+                                "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                            }
+                        ],
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/album/0S0KGZnfBGSIssfF54WSJh"
+                        },
+                        "href": "https://api.spotify.com/v1/albums/0S0KGZnfBGSIssfF54WSJh",
+                        "id": "0S0KGZnfBGSIssfF54WSJh",
+                        "images": [
+                            {
+                                "height": 640,
+                                "url": "https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce",
+                                "width": 640
+                            },
+                            {
+                                "height": 300,
+                                "url": "https://i.scdn.co/image/ab67616d00001e0250a3147b4edd7701a876c6ce",
+                                "width": 300
+                            },
+                            {
+                                "height": 64,
+                                "url": "https://i.scdn.co/image/ab67616d0000485150a3147b4edd7701a876c6ce",
+                                "width": 64
+                            }
+                        ],
+                        "name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+                        "release_date": "2019-03-29",
+                        "release_date_precision": "day",
+                        "total_tracks": 14,
+                        "type": "album",
+                        "uri": "spotify:album:0S0KGZnfBGSIssfF54WSJh"
+                    },
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/6qqNVTkY8uBg9cP3Jd7DAH",
+                            "id": "6qqNVTkY8uBg9cP3Jd7DAH",
+                            "name": "Billie Eilish",
+                            "type": "artist",
+                            "uri": "spotify:artist:6qqNVTkY8uBg9cP3Jd7DAH"
+                        }
+                    ],
+                    "available_markets": [],
+                    "disc_number": 1,
+                    "duration_ms": 221543,
+                    "explicit": false,
+                    "external_ids": {
+                        "isrc": "USUM71900767"
+                    },
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/track/3Fj47GNK2kUF0uaEDgXLaD"
+                    },
+                    "href": "https://api.spotify.com/v1/tracks/3Fj47GNK2kUF0uaEDgXLaD",
+                    "id": "3Fj47GNK2kUF0uaEDgXLaD",
+                    "is_local": false,
+                    "is_playable": true,
+                    "name": "wish you were gay",
+                    "popularity": 80,
+                    "preview_url": null,
+                    "track_number": 6,
+                    "type": "track",
+                    "uri": "spotify:track:3Fj47GNK2kUF0uaEDgXLaD"
+                }
+            ],
+            "limit": 1,
+            "next": "https://api.spotify.com/v1/search?query=wish+you+were+gay&type=track&market=US&offset=1&limit=1",
+            "offset": 0,
+            "previous": null,
+            "total": 87
+        }
+    }
+}

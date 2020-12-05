@@ -15,13 +15,6 @@ import spotipy.util as util
 
 
 
-
-
-
-
-
-
-
 #Spotipy API Info
 CLIENT_ID = '9445bfc4e61f43ed83ec2782d464e42c'
 CLIENT_SECRET = 'f7fb2a1c147744d1ade617f598eabc46'
@@ -54,34 +47,36 @@ def find_song_ids(song_names):
     }
     BASE_URL = 'https://api.spotify.com/v1/search?q='
 
-    tracks_ids = []
+    tracks_dict = {}
+    count = 0
 
     for song in song_names:
         r = requests.get(BASE_URL + song + '&type=track&market=US&limit=1', headers=headers)
-        r = r.json()
-        write_json('spotify_tracks.json', r)
+        results = json.loads(r.text)
+        tracks_dict[song] = results
+        write_json('spotify_tracks.json', tracks_dict)
+        #r = r.json()
+        #write_json('spotify_tracks.json', r)
+        #tracks_dict[song] = r
+        if count < 25:
+            count += 1
+        else:
+            break
+    return tracks_dict
+    
 
-def get_todays_top_hits():
-    AUTH_URL = 'https://accounts.spotify.com/api/token'
+def popularity(filename, cur, conn):
 
-    auth_response = requests.post(AUTH_URL, {
-        'grant_type': 'client_credentials',
-        'client_id': CLIENT_ID,
-        'client_secret': CLIENT_SECRET,
-    })
+    f = open(filename)
+    file_data = f.read()
+    f.close()
+    json_data = json.loads(file_data)
 
-    auth_response_data = auth_response.json()
-    access_token = auth_response_data['access_token']
-    print(access_token)
-    headers = {
-        'Authorization': 'Bearer {token}'.format(token=access_token)
-    }
+    for track in json_data:
+        name = track['tracks']['items']['name']
 
-    BASE_URL = 'https://api.spotify.com/v1/'
-    playlist_id = '37i9dQZF1DXcBWIGoYBM5M'
-    r = requests.get(BASE_URL + 'playlists/' + playlist_id + '/tracks', headers=headers)
-    r = r.json()
-    return r
+
+
 
 
 
