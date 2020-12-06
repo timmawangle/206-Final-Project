@@ -266,7 +266,7 @@
             "next": "https://api.spotify.com/v1/search?query=wish+you+were+gay&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 87
+            "total": 88
         }
     },
     {

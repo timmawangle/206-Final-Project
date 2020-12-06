@@ -5,6 +5,10 @@ import requests
 import sqlite3
 import spotipy
 import spotipy.util as util
+
+import google_auth_oauthlib.flow
+import googleapiclient.discovery
+import googleapiclient.errors
 #from spotipy.oauth2 import SpotifyClientCredentials
 
 # Names
@@ -17,11 +21,6 @@ CLIENT_SECRET = 'f7fb2a1c147744d1ade617f598eabc46'
 
 #Today's Top Hits Playlist URI
 #URI = 'spotify:playlist:37i9dQZF1DXcBWIGoYBM5M'
-
-#YouTube API Info
-API_KEY = 'AIzaSyD2NJk0i7N6SLl1SHzr1sOeMUuaDkcxRJ0'
-Y_CLIENT_ID = '517531547391-96erielcd69ssc725h23vv6mhnv86d84.apps.googleusercontent.com'
-Y_CLIENT_SECRET = 'sq9j0OQYjbgMH9mIkst-7q8O'
 
 def setUpDatabase(db_name):
     path = os.path.dirname(os.path.abspath(__file__))
@@ -38,6 +37,36 @@ def write_json(spotify_json, spotify_dict):
     fw = open(file, 'w')
     fw.write(dumped)
     fw.close()
+
+
+#YouTube API Info
+API_KEY = 'AIzaSyD2NJk0i7N6SLl1SHzr1sOeMUuaDkcxRJ0'
+Y_CLIENT_ID = '517531547391-96erielcd69ssc725h23vv6mhnv86d84.apps.googleusercontent.com'
+Y_CLIENT_SECRET = 'sq9j0OQYjbgMH9mIkst-7q8O'
+#Youtube
+scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
+
+def y_main():
+
+    api_service_name = "youtube"
+    api_version = "v3"
+    client_secrets_file = "YOUR_CLIENT_SECRET_FILE.json"
+
+    # Get credentials and create an API client
+    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
+        client_secrets_file, scopes)
+    credentials = flow.run_console()
+    youtube = googleapiclient.discovery.build(
+        api_service_name, api_version, credentials=credentials)
+
+    request = youtube.playlistItems().list(
+        part="snippet,contentDetails",
+        maxResults=25,
+        playlistId="PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU"
+    )
+    response = request.execute()
+
+    print(response)
 
 
 def find_song_ids(song_names):
