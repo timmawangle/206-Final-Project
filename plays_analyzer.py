@@ -11,18 +11,24 @@ import spotipy.util as util
 # Timothy Wang - timwa@umich.edu
 # Emily Choe - emchoe@umich.edu
 
-def setUpDatabase(db_name):
-    path = os.path.dirname(os.path.abspath(__file__))
-    conn = sqlite3.connect(path + '/' + db_name)
-    cur = conn.cursor()
-    return cur, conn
-
 #Spotipy API Info
 CLIENT_ID = '9445bfc4e61f43ed83ec2782d464e42c'
 CLIENT_SECRET = 'f7fb2a1c147744d1ade617f598eabc46'
 
 #Today's Top Hits Playlist URI
 #URI = 'spotify:playlist:37i9dQZF1DXcBWIGoYBM5M'
+
+#YouTube API Info
+API_KEY = 'AIzaSyD2NJk0i7N6SLl1SHzr1sOeMUuaDkcxRJ0'
+Y_CLIENT_ID = '517531547391-96erielcd69ssc725h23vv6mhnv86d84.apps.googleusercontent.com'
+Y_CLIENT_SECRET = 'sq9j0OQYjbgMH9mIkst-7q8O'
+
+def setUpDatabase(db_name):
+    path = os.path.dirname(os.path.abspath(__file__))
+    conn = sqlite3.connect(path + '/' + db_name)
+    cur = conn.cursor()
+    return cur, conn
+
 
 def write_json(spotify_json, spotify_dict):
     filepath = os.path.dirname(os.path.realpath(__file__))
@@ -32,6 +38,7 @@ def write_json(spotify_json, spotify_dict):
     fw = open(file, 'w')
     fw.write(dumped)
     fw.close()
+
 
 def find_song_ids(song_names):
     AUTH_URL = 'https://accounts.spotify.com/api/token'
@@ -65,12 +72,14 @@ def find_song_ids(song_names):
         else:
             break
     return tracks_list
-    
+
+
 def add_artists(cur, conn, index, name):
     cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (index, name))
     conn.commit()
 
-def popularity(filename, cur, conn):
+
+def fill_spotify_tables(filename, cur, conn):
     filepath = os.path.dirname(os.path.realpath(__file__))
     filename = os.path.join(filepath, filename)
     f = open(filename)
@@ -87,28 +96,32 @@ def popularity(filename, cur, conn):
         name = track['tracks']['items'][0]['name']
         artist = track['tracks']['items'][0]['artists'][0]['name']
         popularity_num = track['tracks']['items'][0]['popularity']
-        if artist in unique_artists:
-            continue
-        else:
+        #print(popularity_num)
+        if artist not in unique_artists:
             unique_artists.append(artist)
 
-        temp = {name: [artist, popularity_num]}
+        temp = (name, artist, popularity_num)
+        #print(temp)
         tracks_list.append(temp)
 
-        cur.execute("SELECT artist_id from Artists WHERE name = ?", (artist,))
-        cur.execute("INSERT INTO Artists (artist_id, name) VALUES (?,?)", (count, artist))
-    conn.commit()
+    artist_ids = {}
+    count = 0
+    for artist in unique_artists:
+        add_artists(cur, conn, count, artist)
+        artist_ids[artist] = count
+        count += 1
 
-    #count = 1
-    #for artist in unique_artists:
-        #add_artists(cur, conn, count, artist)
-        #count += 1
-    #conn.commit()
+    count = 0
+    for track in tracks_list:
+        add_tracks(cur, conn, count, track[0], artist_ids[track[1]], track[2])
+        count += 1
+
 
 def create_artists_table(cur, conn):
     cur.execute("DROP TABLE IF EXISTS Artists")
     cur.execute("CREATE TABLE Artists (artist_id INTEGER, name TEXT)")
     conn.commit()
+
 
 def create_tracks_table(cur, conn):
     cur.execute("DROP TABLE IF EXISTS Tracks")
@@ -121,14 +134,15 @@ def add_tracks(cur, conn, track_index, track_name, artist_index, popularity_inde
     conn.commit()
 
 
+
 def main():
     #write_json('spotify_top_hits.json', get_todays_top_hits())
     cur, conn = setUpDatabase('top_songs.db')
-    song_names = ['Wonder', 'positions', 'wish you were gay', 'Wonder']
+    song_names = ['Wonder', 'positions', 'wish you were gay', 'Billie Eilish - Therefore I am']
     find_song_ids(song_names)
-    popularity('spotify_tracks.json', cur, conn)
     create_artists_table(cur, conn)
     create_tracks_table(cur, conn)
+    fill_spotify_tables('spotify_tracks.json', cur, conn)
 
 
 
