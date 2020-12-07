@@ -39,36 +39,6 @@ def write_json(spotify_json, spotify_dict):
     fw.close()
 
 
-#YouTube API Info
-API_KEY = 'AIzaSyD2NJk0i7N6SLl1SHzr1sOeMUuaDkcxRJ0'
-Y_CLIENT_ID = '517531547391-96erielcd69ssc725h23vv6mhnv86d84.apps.googleusercontent.com'
-Y_CLIENT_SECRET = 'sq9j0OQYjbgMH9mIkst-7q8O'
-#Youtube
-scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
-
-def y_main():
-
-    api_service_name = "youtube"
-    api_version = "v3"
-    client_secrets_file = "YOUR_CLIENT_SECRET_FILE.json"
-
-    # Get credentials and create an API client
-    flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
-        client_secrets_file, scopes)
-    credentials = flow.run_console()
-    youtube = googleapiclient.discovery.build(
-        api_service_name, api_version, credentials=credentials)
-
-    request = youtube.playlistItems().list(
-        part="snippet,contentDetails",
-        maxResults=25,
-        playlistId="PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU"
-    )
-    response = request.execute()
-
-    print(response)
-
-
 def find_song_ids(song_names):
     AUTH_URL = 'https://accounts.spotify.com/api/token'
 
@@ -86,7 +56,7 @@ def find_song_ids(song_names):
     BASE_URL = 'https://api.spotify.com/v1/search?q='
 
     tracks_list = []
-    count = 0
+    #count = 0
 
     for song in song_names:
         r = requests.get(BASE_URL + song + '&type=track&market=US&limit=1', headers=headers)
@@ -96,16 +66,16 @@ def find_song_ids(song_names):
         #r = r.json()
         #write_json('spotify_tracks.json', r)
         #tracks_dict[song] = r
-        if count < 25:
-            count += 1
-        else:
-            break
+        #if count < 25:
+            #count += 1
+        #else:
+            #break
     return tracks_list
 
 
-def add_artists(cur, conn, index, name):
-    cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (index, name))
-    conn.commit()
+#def add_artists(cur, conn, index, name):
+    #cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (index, name))
+    #conn.commit()
 
 
 def fill_spotify_tables(filename, cur, conn):
@@ -122,6 +92,7 @@ def fill_spotify_tables(filename, cur, conn):
     count = 0
     for track in json_data:
         count += 1
+        #print(count)
         name = track['tracks']['items'][0]['name']
         artist = track['tracks']['items'][0]['artists'][0]['name']
         popularity_num = track['tracks']['items'][0]['popularity']
@@ -133,46 +104,91 @@ def fill_spotify_tables(filename, cur, conn):
         #print(temp)
         tracks_list.append(temp)
 
-    artist_ids = {}
-    count = 0
-    for artist in unique_artists:
-        add_artists(cur, conn, count, artist)
-        artist_ids[artist] = count
-        count += 1
-
-    count = 0
-    for track in tracks_list:
-        add_tracks(cur, conn, count, track[0], artist_ids[track[1]], track[2])
-        count += 1
+    #artist_ids = {}
+    #count = 0
+    #for artist in unique_artists:
+        #add_artists(cur, conn, count, artist)
+        #artist_ids[artist] = count
+        #count += 1
+    artist_ids = add_artists(cur, conn, unique_artists)
+    add_tracks(cur, conn, tracks_list, artist_ids)
+    #count = 0
+    #for track in tracks_list:
+        #add_tracks(cur, conn, count, track[0], artist_ids[track[1]], track[2])
+        #count += 1
 
 
 def create_artists_table(cur, conn):
-    cur.execute("DROP TABLE IF EXISTS Artists")
-    cur.execute("CREATE TABLE Artists (artist_id INTEGER, name TEXT)")
+    cur.execute("CREATE TABLE IF NOT EXISTS Artists (artist_id INTEGER, name TEXT)")
     conn.commit()
 
 
 def create_tracks_table(cur, conn):
-    cur.execute("DROP TABLE IF EXISTS Tracks")
-    cur.execute("CREATE TABLE Tracks (track_id INTEGER, track_name TEXT, artist_id INTEGER, pop_index INTEGER)")
+    cur.execute("CREATE TABLE IF NOT EXISTS Tracks (track_id INTEGER, track_name TEXT, artist_id INTEGER, pop_index INTEGER)")
     conn.commit()
 
 
-def add_tracks(cur, conn, track_index, track_name, artist_index, popularity_index):
-    cur.execute("INSERT INTO Tracks(track_id, track_name, artist_id, pop_index) VALUES (?,?,?,?)", (track_index, track_name, artist_index, popularity_index))
+#def add_tracks(cur, conn, track_index, track_name, artist_index, popularity_index):
+    #cur.execute("INSERT INTO Tracks(track_id, track_name, artist_id, pop_index) VALUES (?,?,?,?)", (track_index, track_name, artist_index, popularity_index))
+    #conn.commit()
+
+def add_artists(cur, conn, artists):
+    cur.execute('SELECT name FROM Artists')
+    inserted_artists = cur.fetchall()
+    num_artists = len(inserted_artists)
+    max_artists = num_artists + 25
+    
+    artist_ids = {}
+
+    count = 0
+    for artist in artists:
+        if count < 25:
+            if artist not in inserted_artists:
+                cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (num_artists + count, artists[num_artists + count]))
+                artist_ids[artists[num_artists + count]] = num_artists + count
+                count += 1
+            else:
+                continue
+        else:
+            break
+    
+    
+    #while num_artists < (max_artists or len(artists)):
+        #print(num_artists)
+        #print(artists[num_artists])
+        #cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (num_artists, artists[num_artists]))
+        #artist_ids[artists[num_artists]] = num_artists
+        #num_artists += 1
+
     conn.commit()
+    return artist_ids
 
+def add_tracks(cur, conn, track_list, artist_ids):
+    cur.execute('SELECT track_name FROM Tracks')
+    inserted_songs =  cur.fetchall()
+    num_songs = len(inserted_songs)
+    max_songs = num_songs + 25
 
+    while num_songs < max_songs:
+        #print(num_songs)
+        #print(track_list[num_songs][0])
+        if track_list[num_songs][0] not in inserted_songs:
+            cur.execute("INSERT INTO Tracks(track_id, track_name, artist_id, pop_index) VALUES (?,?,?,?)", (num_songs, track_list[num_songs][0], artist_ids[track_list[num_songs][1]], track_list[num_songs][2]))
+        num_songs += 1
+    conn.commit()
 
 def main():
     #write_json('spotify_top_hits.json', get_todays_top_hits())
     cur, conn = setUpDatabase('top_songs.db')
-    song_names = ['Wonder', 'positions', 'wish you were gay', 'Billie Eilish - Therefore I am']
+    song_names = ['Wonder', 'positions', 'wish you were gay', 'Billie Eilish - Therefore I am', 'you broke me first',
+                  'Mariposa', 'Love Affair', 'Eleven', 'Painkiller', 'Blue World', 'Circles', 'Sunflower',
+                  'Modern Loneliness', 'Run', '17', 'Lose', 'Lonely', 'Dusk Till Dawn', 'head first', 'Best Friend'
+                  , 'drunk', 'Tick Tock', 'Chanel', 'Better', 'Good News', 'Haunt You']
     find_song_ids(song_names)
-    create_artists_table(cur, conn)
-    create_tracks_table(cur, conn)
-    fill_spotify_tables('spotify_tracks.json', cur, conn)
-
+    #create_artists_table(cur, conn)
+    #create_tracks_table(cur, conn)
+    #fill_spotify_tables('spotify_tracks.json', cur, conn)
+    y_main()
 
 
 if __name__ == "__main__":
