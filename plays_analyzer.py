@@ -5,6 +5,7 @@ import requests
 import sqlite3
 import spotipy
 import spotipy.util as util
+import re
 
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
@@ -177,18 +178,64 @@ def add_tracks(cur, conn, track_list, artist_ids):
         num_songs += 1
     conn.commit()
 
+
+def get_playlist_info(filename, cur, conn):
+    filepath = os.path.dirname(os.path.realpath(__file__))
+    filename = os.path.join(filepath, filename)
+    f = open(filename)
+    file_data = f.read()
+    f.close()
+    json_data = json.loads(file_data)
+
+    # | video_id | video_name | video_ranking |
+    for video in json_data:
+        position = video['snippet']['position']
+        title = video['snippet']['title']
+        title = title.split('(O')[0]
+        title = title.split('(o')[0]
+        title = title.split('[O')[0]
+        if '-' in title:
+            artist = title.split('-')[0].strip()
+            title = title.split('-')[1].strip()
+        if '–' in title:
+            artist = title.split('–')[0].strip()
+            title = title.split('–')[1].strip()
+        if re.search("'.+'", title):
+            artist = title.split("'")[0].split('(')[0].strip()
+            title = title.split("'")[1].strip()
+        if re.search('".+"', title):
+            artist = title.split('"')[0].strip()
+            title = title.split('"')[1].strip()
+        title = title.split('(')[0].strip()
+        title = title.split(' ft')[0].strip()
+        title = title.split(' feat')[0].strip()
+        title = title.split(' Featuring')[0].strip()
+        title = title.split(' FT')[0].strip()
+
+        artist = artist.split(' feat.')[0].strip()
+        artist = artist.split(',')[0].strip()
+        artist = artist.split(' x ')[0].strip()
+        artist = artist.split(' ft.')[0].strip()
+
+        title = title.lstrip()
+        title = title.strip()
+        print("artist: " + artist)
+        print('title: ' + title)
+        print('position: ' + str(position))
+        print(' ')
+
 def main():
     #write_json('spotify_top_hits.json', get_todays_top_hits())
     cur, conn = setUpDatabase('top_songs.db')
-    song_names = ['Wonder', 'positions', 'wish you were gay', 'Billie Eilish - Therefore I am', 'you broke me first',
-                  'Mariposa', 'Love Affair', 'Eleven', 'Painkiller', 'Blue World', 'Circles', 'Sunflower',
-                  'Modern Loneliness', 'Run', '17', 'Lose', 'Lonely', 'Dusk Till Dawn', 'head first', 'Best Friend'
-                  , 'drunk', 'Tick Tock', 'Chanel', 'Better', 'Good News', 'Haunt You']
-    find_song_ids(song_names)
+    get_playlist_info('youtube_tracks.json', cur, conn)
+    # song_names = ['Wonder', 'positions', 'wish you were gay', 'Billie Eilish - Therefore I am', 'you broke me first',
+    #               'Mariposa', 'Love Affair', 'Eleven', 'Painkiller', 'Blue World', 'Circles', 'Sunflower',
+    #               'Modern Loneliness', 'Run', '17', 'Lose', 'Lonely', 'Dusk Till Dawn', 'head first', 'Best Friend'
+    #               , 'drunk', 'Tick Tock', 'Chanel', 'Better', 'Good News', 'Haunt You']
+    # find_song_ids(song_names)
     #create_artists_table(cur, conn)
     #create_tracks_table(cur, conn)
     #fill_spotify_tables('spotify_tracks.json', cur, conn)
-    y_main()
 
 
 if __name__ == "__main__":
