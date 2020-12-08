@@ -272,12 +272,28 @@ def add_videos_db(cur, conn, video_list):
         num_videos += 1
     conn.commit()
 
+
 def get_video_list(video_tuples):
     titles = []
     for tup in video_tuples:
         titles.append(tup[1])
     #print(titles)
     return titles
+
+def join_tables(cur, conn):
+    cur.execute('SELECT Tracks.track_name, Tracks.artist_id, Tracks.pop_index, Videos.ranking FROM Tracks JOIN Videos ON Tracks.track_id=Videos.video_id ORDER BY pop_index DESC')
+    songs = cur.fetchall()
+    print(songs)
+    #difference_list = []
+    
+    #f = open("calculations.txt", "w")
+
+    #for i in range(len(songs)):
+    
+    #"Spotify's ranking of " + str(songs[i][0]) + " is " + str(i + 1) + ". \n Youtube's ranking of " + str(songs[i][0]) + " is " + str(song[i][2])
+
+
+   
 
 def main():
     cur, conn = setUpDatabase('top_songs.db')
@@ -288,6 +304,7 @@ def main():
     create_artists_table(cur, conn)
     create_tracks_table(cur, conn)
     fill_spotify_tables('spotify_tracks.json', cur, conn)
+    join_tables(cur, conn)
 
 
 if __name__ == "__main__":

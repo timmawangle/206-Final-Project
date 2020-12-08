@@ -174,7 +174,7 @@
             "next": "https://api.spotify.com/v1/search?query=Got+What+I+Got&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7337
+            "total": 7002
         }
     },
     {
@@ -306,7 +306,7 @@
             "next": "https://api.spotify.com/v1/search?query=FRANCHISE&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1925
+            "total": 1928
         }
     },
     {
@@ -731,7 +731,7 @@
             "next": "https://api.spotify.com/v1/search?query=Go+Crazy&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 17462
+            "total": 17463
         }
     },
     {
@@ -820,7 +820,7 @@
             "next": "https://api.spotify.com/v1/search?query=Spider&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 51872
+            "total": 51858
         }
     },
     {
@@ -1018,7 +1018,7 @@
             "next": "https://api.spotify.com/v1/search?query=I+Hope&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 66918
+            "total": 66932
         }
     },
     {
@@ -1137,7 +1137,7 @@
             "next": "https://api.spotify.com/v1/search?query=Me+Gusta&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 30027
+            "total": 30031
         }
     },
     {
@@ -1358,7 +1358,7 @@
             "next": "https://api.spotify.com/v1/search?query=For+The+Night&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 93505
+            "total": 90840
         }
     },
     {
@@ -1450,7 +1450,7 @@
             "next": "https://api.spotify.com/v1/search?query=Facts&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 15883
+            "total": 15888
         }
     },
     {
@@ -1559,7 +1559,7 @@
             "next": "https://api.spotify.com/v1/search?query=Haw%C3%A1i+Remix&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 232
+            "total": 233
         }
     },
     {
@@ -1671,7 +1671,7 @@
             "next": "https://api.spotify.com/v1/search?query=Flawed&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1982
+            "total": 1985
         }
     },
     {
@@ -1749,7 +1749,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Kings & Queens",
-                    "popularity": 79,
+                    "popularity": 80,
                     "preview_url": "https://p.scdn.co/mp3-preview/ba1e404e07ed5658ba7fe809919c2790b21033f6?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "track_number": 3,
                     "type": "track",
@@ -1961,7 +1961,7 @@
             "next": "https://api.spotify.com/v1/search?query=Fleetwood+Mac&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 2850
+            "total": 2849
         }
     },
     {
@@ -2063,7 +2063,7 @@
             "next": "https://api.spotify.com/v1/search?query=ROCKSTAR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 25538
+            "total": 25550
         }
     },
     {
@@ -2155,7 +2155,7 @@
             "next": "https://api.spotify.com/v1/search?query=2+Cents&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1370
+            "total": 1371
         }
     },
     {
@@ -2333,7 +2333,7 @@
             "next": "https://api.spotify.com/v1/search?query=Before+You+Go&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 13305
+            "total": 13318
         }
     },
     {
@@ -2445,7 +2445,7 @@
             "next": "https://api.spotify.com/v1/search?query=SAVAGE+LOVE&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 2025
+            "total": 2027
         }
     },
     {
@@ -2557,7 +2557,7 @@
             "next": "https://api.spotify.com/v1/search?query=Good+Evening&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7434
+            "total": 7436
         }
     },
     {
@@ -2850,7 +2850,7 @@
             "next": "https://api.spotify.com/v1/search?query=The+Box&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 78990
+            "total": 79005
         }
     },
     {
@@ -2949,7 +2949,7 @@
             "next": "https://api.spotify.com/v1/search?query=What+A+Time+To+Be+Alive&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 638
+            "total": 640
         }
     },
     {
@@ -3299,7 +3299,7 @@
             "next": "https://api.spotify.com/v1/search?query=Be+Like+That&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 10227
+            "total": 10243
         }
     },
     {
@@ -3569,7 +3569,7 @@
             "next": "https://api.spotify.com/v1/search?query=Adore+You&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3080
+            "total": 3082
         }
     },
     {
@@ -3773,7 +3773,7 @@
             "next": "https://api.spotify.com/v1/search?query=D%C3%A1kiti&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 99
+            "total": 102
         }
     },
     {
@@ -4211,7 +4211,7 @@
             "next": "https://api.spotify.com/v1/search?query=POPSTAR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 5125
+            "total": 5141
         }
     },
     {
@@ -4323,7 +4323,7 @@
             "next": "https://api.spotify.com/v1/search?query=Roses&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 61909
+            "total": 61947
         }
     },
     {
@@ -4412,7 +4412,7 @@
             "next": "https://api.spotify.com/v1/search?query=Lovin%27+On+You&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4386
+            "total": 4382
         }
     },
     {
@@ -4633,7 +4633,7 @@
             "next": "https://api.spotify.com/v1/search?query=If+the+World+Was+Ending&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 219
+            "total": 220
         }
     },
     {
@@ -4722,7 +4722,7 @@
             "next": "https://api.spotify.com/v1/search?query=Don%27t+Start+Now&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1145
+            "total": 1146
         }
     },
     {
@@ -5012,7 +5012,7 @@
             "next": "https://api.spotify.com/v1/search?query=ily&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 84160
+            "total": 84202
         }
     },
     {
@@ -5114,7 +5114,7 @@
             "next": "https://api.spotify.com/v1/search?query=Said+Sum&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 515
+            "total": 517
         }
     },
     {
@@ -5216,7 +5216,7 @@
             "next": "https://api.spotify.com/v1/search?query=Rags2Riches&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 2590
+            "total": 2592
         }
     },
     {
@@ -5305,7 +5305,7 @@
             "next": "https://api.spotify.com/v1/search?query=Midnight+Sky&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1685
+            "total": 1687
         }
     },
     {
@@ -5519,7 +5519,7 @@
             "next": "https://api.spotify.com/v1/search?query=Life+Is+Good&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7800
+            "total": 7906
         }
     },
     {
@@ -5686,7 +5686,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Cool Again",
-                    "popularity": 69,
+                    "popularity": 68,
                     "preview_url": "https://p.scdn.co/mp3-preview/92c5bdcb716ea4c016ff495c05cb86bcef5d6083?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "track_number": 1,
                     "type": "track",
@@ -5785,7 +5785,7 @@
                     "is_local": false,
                     "is_playable": false,
                     "name": "We Paid (feat. 42 Dugg)",
-                    "popularity": 81,
+                    "popularity": 82,
                     "preview_url": null,
                     "restrictions": {
                         "reason": "explicit"
@@ -5977,7 +5977,7 @@
             "next": "https://api.spotify.com/v1/search?query=Chasin%27+You&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3214
+            "total": 3216
         }
     },
     {
@@ -6260,7 +6260,7 @@
             "next": "https://api.spotify.com/v1/search?query=Blueberry+Faygo&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 101
+            "total": 102
         }
     },
     {
@@ -6461,7 +6461,7 @@
             "next": "https://api.spotify.com/v1/search?query=Savage+Remix&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1416
+            "total": 1417
         }
     },
     {
@@ -6553,7 +6553,7 @@
             "next": "https://api.spotify.com/v1/search?query=Wishing+Well&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4098
+            "total": 4099
         }
     },
     {
@@ -6662,7 +6662,7 @@
             "next": "https://api.spotify.com/v1/search?query=Rain+On+Me&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 29671
+            "total": 29798
         }
     },
     {
@@ -6754,7 +6754,7 @@
             "next": "https://api.spotify.com/v1/search?query=Say+So&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 44991
+            "total": 44997
         }
     },
     {
@@ -6853,7 +6853,7 @@
             "next": "https://api.spotify.com/v1/search?query=Intentions&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 12871
+            "total": 12869
         }
     },
     {
@@ -6942,7 +6942,7 @@
             "next": "https://api.spotify.com/v1/search?query=One+Margarita&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1960
+            "total": 1962
         }
     },
     {
@@ -7031,7 +7031,7 @@
             "next": "https://api.spotify.com/v1/search?query=The+Bones&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 18691
+            "total": 18702
         }
     },
     {
@@ -7120,7 +7120,7 @@
             "next": "https://api.spotify.com/v1/search?query=Hard+To+Forget&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3268
+            "total": 3269
         }
     },
     {
@@ -7496,7 +7496,7 @@
             "next": "https://api.spotify.com/v1/search?query=Someone+You+Loved&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1500
+            "total": 1499
         }
     },
     {
@@ -7588,7 +7588,7 @@
             "next": "https://api.spotify.com/v1/search?query=DIOR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 8612
+            "total": 8617
         }
     },
     {
@@ -7720,7 +7720,7 @@
             "next": "https://api.spotify.com/v1/search?query=MAMACITA&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3019
+            "total": 3025
         }
     },
     {
@@ -7829,7 +7829,7 @@
             "next": "https://api.spotify.com/v1/search?query=Breaking+Me&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4269
+            "total": 4270
         }
     },
     {
@@ -8043,7 +8043,7 @@
             "next": "https://api.spotify.com/v1/search?query=Over+Now&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 5941
+            "total": 7084
         }
     },
     {
@@ -8145,7 +8145,7 @@
             "next": "https://api.spotify.com/v1/search?query=Don%E2%80%99t+Stop&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 36740
+            "total": 36758
         }
     },
     {
@@ -8234,7 +8234,7 @@
             "next": "https://api.spotify.com/v1/search?query=Sweet+Melody&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4577
+            "total": 4582
         }
     },
     {
@@ -8435,7 +8435,7 @@
             "next": "https://api.spotify.com/v1/search?query=You%27re+Mines+Still&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 15
+            "total": 16
         }
     },
     {
@@ -8527,7 +8527,7 @@
             "next": "https://api.spotify.com/v1/search?query=Daisy&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 18013
+            "total": 18015
         }
     },
     {
@@ -8738,7 +8738,7 @@
             "next": "https://api.spotify.com/v1/search?query=Blinding+Lights&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1638
+            "total": 1640
         }
     },
     {
@@ -8827,7 +8827,7 @@
             "next": "https://api.spotify.com/v1/search?query=Life+Goes+On&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 13837
+            "total": 13860
         }
     },
     {
@@ -9007,7 +9007,7 @@
                     "is_local": false,
                     "is_playable": false,
                     "name": "Body",
-                    "popularity": 84,
+                    "popularity": 85,
                     "preview_url": "https://p.scdn.co/mp3-preview/55880b87b1206980a7748b7d40a92023bf807aab?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "restrictions": {
                         "reason": "explicit"
@@ -9110,7 +9110,7 @@
             "next": "https://api.spotify.com/v1/search?query=Break+My+Heart&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 31146
+            "total": 31014
         }
     },
     {
@@ -9522,7 +9522,7 @@
             "next": "https://api.spotify.com/v1/search?query=What+You+Know+Bout+Love&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 186
+            "total": 187
         }
     },
     {
@@ -9614,7 +9614,7 @@
             "next": "https://api.spotify.com/v1/search?query=positions&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4314
+            "total": 4317
         }
     },
     {
@@ -9703,7 +9703,7 @@
             "next": "https://api.spotify.com/v1/search?query=Dynamite&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 16425
+            "total": 16432
         }
     },
     {
@@ -9801,7 +9801,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Prisoner (feat. Dua Lipa)",
-                    "popularity": 89,
+                    "popularity": 90,
                     "preview_url": "https://p.scdn.co/mp3-preview/993e160238e38b9d7f62106bf974228af84d7d48?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "track_number": 1,
                     "type": "track",
@@ -9812,7 +9812,7 @@
             "next": "https://api.spotify.com/v1/search?query=Prisoner&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 12372
+            "total": 12376
         }
     },
     {
@@ -9996,7 +9996,7 @@
             "next": "https://api.spotify.com/v1/search?query=Tap+In&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 31033
+            "total": 31036
         }
     }
 ]
