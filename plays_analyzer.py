@@ -112,6 +112,7 @@ def fill_spotify_tables(filename, cur, conn):
         #artist_ids[artist] = count
         #count += 1
     artist_ids = add_artists(cur, conn, unique_artists)
+    #print(artist_ids)
     add_tracks(cur, conn, tracks_list, artist_ids)
     #count = 0
     #for track in tracks_list:
@@ -134,19 +135,32 @@ def create_tracks_table(cur, conn):
     #conn.commit()
 
 def add_artists(cur, conn, artists):
+    #print(len(artists))
     cur.execute('SELECT name FROM Artists')
     inserted_artists = cur.fetchall()
     num_artists = len(inserted_artists)
     max_artists = num_artists + 25
-    
+    cur.execute('SELECT name, artist_id FROM Artists')
+    #print('AL:KSHDLASDKASD:ASKJDas')
     artist_ids = {}
+    pairs = cur.fetchall()
+    for pair in pairs:
+        artist_ids[pair[0]] = pair[1]
+    #print(artist_ids)
+    
+    if num_artists >= len(artists):
+        return artist_ids
+    if max_artists >= len(artists):
+        max_artists = len(artists)
 
-    count = 0
+    count = num_artists
     for artist in artists:
-        if count < 25:
+        #print(count)
+        #print(max_artists)
+        if count < max_artists:
             if artist not in inserted_artists:
-                cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (num_artists + count, artists[num_artists + count]))
-                artist_ids[artists[num_artists + count]] = num_artists + count
+                cur.execute("INSERT INTO Artists(artist_id, name) VALUES (?,?)", (count, artists[count]))
+                artist_ids[artists[count]] = count
                 count += 1
             else:
                 continue
@@ -162,19 +176,24 @@ def add_artists(cur, conn, artists):
         #num_artists += 1
 
     conn.commit()
+    #print(artist_ids)
     return artist_ids
 
 def add_tracks(cur, conn, track_list, artist_ids):
+    #print(artist_ids)
+
     cur.execute('SELECT track_name FROM Tracks')
     inserted_songs =  cur.fetchall()
     num_songs = len(inserted_songs)
     max_songs = num_songs + 25
 
+    if num_songs >= 100:
+        return
+
     while num_songs < max_songs:
         #print(num_songs)
         #print(track_list[num_songs][0])
-        if track_list[num_songs][0] not in inserted_songs:
-            cur.execute("INSERT INTO Tracks(track_id, track_name, artist_id, pop_index) VALUES (?,?,?,?)", (num_songs, track_list[num_songs][0], artist_ids[track_list[num_songs][1]], track_list[num_songs][2]))
+        cur.execute("INSERT INTO Tracks(track_id, track_name, artist_id, pop_index) VALUES (?,?,?,?)", (num_songs, track_list[num_songs][0], artist_ids[track_list[num_songs][1]], track_list[num_songs][2]))
         num_songs += 1
     conn.commit()
 
@@ -187,10 +206,14 @@ def get_playlist_info(filename, cur, conn):
     f.close()
     json_data = json.loads(file_data)
 
-    # | video_id | video_name | video_ranking |
+    video_list = []
+
+    # Table | video_id | video_name | video_ranking |
     for video in json_data:
         position = video['snippet']['position']
         title = video['snippet']['title']
+
+        #Filter from video title main artist name, track name, and ranking
         title = title.split('(O')[0]
         title = title.split('(o')[0]
         title = title.split('[O')[0]
@@ -219,23 +242,52 @@ def get_playlist_info(filename, cur, conn):
 
         title = title.lstrip()
         title = title.strip()
-        print("artist: " + artist)
-        print('title: ' + title)
-        print('position: ' + str(position))
-        print(' ')
+
+        #print("artist: " + artist)
+        #print('title: ' + title)
+        #print('position: ' + str(position))
+        #print(' ')
+
+        temp = (artist, title, position + 1)
+        video_list.append(temp)
+
+    return video_list
+
+def create_video_table(cur, conn):
+    cur.execute("CREATE TABLE IF NOT EXISTS Videos (video_id INTEGER, video_name TEXT, artist_name TEXT, ranking INTEGER)")
+    conn.commit()
+
+def add_videos_db(cur, conn, video_list):
+    #video_list = [(artist, title, position),...]
+    cur.execute('SELECT video_name FROM Videos')
+    inserted_videos =  cur.fetchall()
+    num_videos = len(inserted_videos)
+    max_videos = num_videos + 25
+
+    if num_videos == 100:
+        return
+
+    while num_videos < max_videos:
+        cur.execute("INSERT INTO Videos(video_id, video_name, artist_name, ranking) VALUES (?,?,?,?)", (num_videos, video_list[num_videos][1], video_list[num_videos][0], video_list[num_videos][2]))
+        num_videos += 1
+    conn.commit()
+
+def get_video_list(video_tuples):
+    titles = []
+    for tup in video_tuples:
+        titles.append(tup[1])
+    #print(titles)
+    return titles
 
 def main():
-    #write_json('spotify_top_hits.json', get_todays_top_hits())
     cur, conn = setUpDatabase('top_songs.db')
-    get_playlist_info('youtube_tracks.json', cur, conn)
-    # song_names = ['Wonder', 'positions', 'wish you were gay', 'Billie Eilish - Therefore I am', 'you broke me first',
-    #               'Mariposa', 'Love Affair', 'Eleven', 'Painkiller', 'Blue World', 'Circles', 'Sunflower',
-    #               'Modern Loneliness', 'Run', '17', 'Lose', 'Lonely', 'Dusk Till Dawn', 'head first', 'Best Friend'
-    #               , 'drunk', 'Tick Tock', 'Chanel', 'Better', 'Good News', 'Haunt You']
-    # find_song_ids(song_names)
-    #create_artists_table(cur, conn)
-    #create_tracks_table(cur, conn)
-    #fill_spotify_tables('spotify_tracks.json', cur, conn)
+    videos = get_playlist_info('youtube_tracks.json', cur, conn)
+    create_video_table(cur, conn)
+    add_videos_db(cur, conn, videos)
+    find_song_ids(get_video_list(videos))
+    create_artists_table(cur, conn)
+    create_tracks_table(cur, conn)
+    fill_spotify_tables('spotify_tracks.json', cur, conn)
 
 
 if __name__ == "__main__":
