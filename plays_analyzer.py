@@ -10,6 +10,9 @@ import re
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
+
+import matplotlib
+import matplotlib.pyplot as plt
 #from spotipy.oauth2 import SpotifyClientCredentials
 
 # Names
