@@ -174,7 +174,7 @@
             "next": "https://api.spotify.com/v1/search?query=Got+What+I+Got&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7002
+            "total": 6845
         }
     },
     {
@@ -1358,7 +1358,7 @@
             "next": "https://api.spotify.com/v1/search?query=For+The+Night&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 90840
+            "total": 89822
         }
     },
     {
@@ -3299,7 +3299,7 @@
             "next": "https://api.spotify.com/v1/search?query=Be+Like+That&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 10243
+            "total": 9779
         }
     },
     {
@@ -6662,7 +6662,7 @@
             "next": "https://api.spotify.com/v1/search?query=Rain+On+Me&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 29798
+            "total": 30584
         }
     },
     {
@@ -9522,7 +9522,7 @@
             "next": "https://api.spotify.com/v1/search?query=What+You+Know+Bout+Love&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 187
+            "total": 188
         }
     },
     {

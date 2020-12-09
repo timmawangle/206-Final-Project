@@ -283,17 +283,30 @@ def get_video_list(video_tuples):
 def join_tables(cur, conn):
     cur.execute('SELECT Tracks.track_name, Tracks.artist_id, Tracks.pop_index, Videos.ranking FROM Tracks JOIN Videos ON Tracks.track_id=Videos.video_id ORDER BY pop_index DESC')
     songs = cur.fetchall()
-    print(songs)
-    #difference_list = []
+    #print(songs)
+    difference_list = []
+    filepath = os.path.dirname(os.path.realpath(__file__))
+    filename = os.path.join(filepath, "calculations.txt")
     
-    #f = open("calculations.txt", "w")
+    f = open(filename, "w")
 
-    #for i in range(len(songs)):
+    for i in range(len(songs)):
+        f.write("Spotify's ranking of " + str(songs[i][0]) + " is " + str(i + 1) + ". \n")
+        f.write("Youtube's ranking of " + str(songs[i][0]) + " is " + str(songs[i][3]) + ". \n")
+        diff = abs((i + 1) - (songs[i][3]))
+        f.write("The difference in ranking is " + str(diff) + ". \n")
+        f.write("\n")
+        difference_list.append(diff)
+
+    total = 0
+    for dif in difference_list:
+        total += dif
     
-    #"Spotify's ranking of " + str(songs[i][0]) + " is " + str(i + 1) + ". \n Youtube's ranking of " + str(songs[i][0]) + " is " + str(song[i][2])
+    #print(len(difference_list))
+    avg = total / len(difference_list)
 
-
-   
+    f.write("The average difference between Youtube and Spotify's ranking is " + str(avg))
+    f.close()
 
 def main():
     cur, conn = setUpDatabase('top_songs.db')
