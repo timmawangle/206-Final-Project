@@ -284,7 +284,7 @@ def get_video_list(video_tuples):
     return titles
 
 def join_tables(cur, conn):
-    cur.execute('CREATE TABLE IF NOT EXISTS tracks_videos as SELECT Tracks.track_name, Tracks.artist_id, Tracks.pop_index, Videos.ranking FROM Tracks JOIN Videos ON Tracks.track_id=Videos.video_id ORDER BY pop_index DESC')
+    cur.execute('CREATE TABLE IF NOT EXISTS tracks_videos as SELECT Tracks.track_id, Tracks.track_name, Tracks.artist_id, Tracks.pop_index, Videos.ranking FROM Tracks JOIN Videos ON Tracks.track_id=Videos.video_id ORDER BY pop_index DESC')
     cur.execute('SELECT tracks_videos.track_name, Artists.name, tracks_videos.pop_index, tracks_videos.ranking FROM tracks_videos JOIN Artists ON tracks_videos.artist_id=Artists.artist_id')
     songs = cur.fetchall()
     #print(songs)

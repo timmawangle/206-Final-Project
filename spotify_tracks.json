@@ -174,7 +174,7 @@
             "next": "https://api.spotify.com/v1/search?query=Got+What+I+Got&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7170
+            "total": 6601
         }
     },
     {
@@ -605,7 +605,7 @@
                     "is_local": false,
                     "is_playable": false,
                     "name": "Whoopty",
-                    "popularity": 89,
+                    "popularity": 90,
                     "preview_url": "https://p.scdn.co/mp3-preview/baeb671e7f235d4a7a1a2fbb9b1d49dc48715b44?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "restrictions": {
                         "reason": "explicit"
@@ -731,7 +731,7 @@
             "next": "https://api.spotify.com/v1/search?query=Go+Crazy&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 17464
+            "total": 17468
         }
     },
     {
@@ -820,7 +820,7 @@
             "next": "https://api.spotify.com/v1/search?query=Spider&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 51870
+            "total": 51881
         }
     },
     {
@@ -929,7 +929,7 @@
             "next": "https://api.spotify.com/v1/search?query=Monster&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 100000
+            "total": 100001
         }
     },
     {
@@ -1018,7 +1018,7 @@
             "next": "https://api.spotify.com/v1/search?query=I+Hope&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 66933
+            "total": 66956
         }
     },
     {
@@ -1137,7 +1137,7 @@
             "next": "https://api.spotify.com/v1/search?query=Me+Gusta&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 30031
+            "total": 30032
         }
     },
     {
@@ -1235,7 +1235,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Levitating (feat. DaBaby)",
-                    "popularity": 89,
+                    "popularity": 90,
                     "preview_url": "https://p.scdn.co/mp3-preview/cc617f669fd1e3ee33a4ac0c66346fefd15286e7?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "track_number": 1,
                     "type": "track",
@@ -1358,7 +1358,7 @@
             "next": "https://api.spotify.com/v1/search?query=For+The+Night&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 83577
+            "total": 88951
         }
     },
     {
@@ -1450,7 +1450,7 @@
             "next": "https://api.spotify.com/v1/search?query=Facts&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 15889
+            "total": 15891
         }
     },
     {
@@ -2063,7 +2063,7 @@
             "next": "https://api.spotify.com/v1/search?query=ROCKSTAR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 25553
+            "total": 25561
         }
     },
     {
@@ -2445,7 +2445,7 @@
             "next": "https://api.spotify.com/v1/search?query=SAVAGE+LOVE&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 2027
+            "total": 2028
         }
     },
     {
@@ -2557,7 +2557,7 @@
             "next": "https://api.spotify.com/v1/search?query=Good+Evening&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7436
+            "total": 7437
         }
     },
     {
@@ -2669,7 +2669,7 @@
             "next": "https://api.spotify.com/v1/search?query=WAP&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 5051
+            "total": 5052
         }
     },
     {
@@ -2850,7 +2850,7 @@
             "next": "https://api.spotify.com/v1/search?query=The+Box&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 79005
+            "total": 79040
         }
     },
     {
@@ -3170,7 +3170,7 @@
             "next": "https://api.spotify.com/v1/search?query=Circles&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 29641
+            "total": 29646
         }
     },
     {
@@ -3299,7 +3299,7 @@
             "next": "https://api.spotify.com/v1/search?query=Be+Like+That&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 9599
+            "total": 10247
         }
     },
     {
@@ -3558,7 +3558,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Adore You",
-                    "popularity": 87,
+                    "popularity": 88,
                     "preview_url": "https://p.scdn.co/mp3-preview/2dbeaa922270b3372d221f09c773a38696aed573?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "track_number": 3,
                     "type": "track",
@@ -3569,7 +3569,7 @@
             "next": "https://api.spotify.com/v1/search?query=Adore+You&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3082
+            "total": 3101
         }
     },
     {
@@ -3647,7 +3647,7 @@
                     "is_local": false,
                     "is_playable": false,
                     "name": "Talk Tough",
-                    "popularity": 59,
+                    "popularity": 60,
                     "preview_url": "https://p.scdn.co/mp3-preview/3a92471359f75be7a950da940f0dac6e4804d2aa?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "restrictions": {
                         "reason": "explicit"
@@ -3773,7 +3773,7 @@
             "next": "https://api.spotify.com/v1/search?query=D%C3%A1kiti&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 102
+            "total": 105
         }
     },
     {
@@ -4211,7 +4211,7 @@
             "next": "https://api.spotify.com/v1/search?query=POPSTAR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 5141
+            "total": 5173
         }
     },
     {
@@ -4323,7 +4323,7 @@
             "next": "https://api.spotify.com/v1/search?query=Roses&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 61953
+            "total": 61978
         }
     },
     {
@@ -4412,7 +4412,7 @@
             "next": "https://api.spotify.com/v1/search?query=Lovin%27+On+You&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4382
+            "total": 4383
         }
     },
     {
@@ -4722,7 +4722,7 @@
             "next": "https://api.spotify.com/v1/search?query=Don%27t+Start+Now&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1146
+            "total": 1148
         }
     },
     {
@@ -5012,7 +5012,7 @@
             "next": "https://api.spotify.com/v1/search?query=ily&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 84202
+            "total": 84216
         }
     },
     {
@@ -5216,7 +5216,7 @@
             "next": "https://api.spotify.com/v1/search?query=Rags2Riches&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 2592
+            "total": 2593
         }
     },
     {
@@ -5519,7 +5519,7 @@
             "next": "https://api.spotify.com/v1/search?query=Life+Is+Good&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7906
+            "total": 7908
         }
     },
     {
@@ -5799,7 +5799,7 @@
             "next": "https://api.spotify.com/v1/search?query=We+Paid&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1012
+            "total": 1011
         }
     },
     {
@@ -6461,7 +6461,7 @@
             "next": "https://api.spotify.com/v1/search?query=Savage+Remix&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1417
+            "total": 1418
         }
     },
     {
@@ -6662,7 +6662,7 @@
             "next": "https://api.spotify.com/v1/search?query=Rain+On+Me&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 30169
+            "total": 29403
         }
     },
     {
@@ -6754,7 +6754,7 @@
             "next": "https://api.spotify.com/v1/search?query=Say+So&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 44998
+            "total": 45007
         }
     },
     {
@@ -6853,7 +6853,7 @@
             "next": "https://api.spotify.com/v1/search?query=Intentions&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 12869
+            "total": 12886
         }
     },
     {
@@ -6942,7 +6942,7 @@
             "next": "https://api.spotify.com/v1/search?query=One+Margarita&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 1962
+            "total": 1963
         }
     },
     {
@@ -7031,7 +7031,7 @@
             "next": "https://api.spotify.com/v1/search?query=The+Bones&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 18702
+            "total": 18703
         }
     },
     {
@@ -7120,7 +7120,7 @@
             "next": "https://api.spotify.com/v1/search?query=Hard+To+Forget&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3269
+            "total": 3271
         }
     },
     {
@@ -7209,7 +7209,7 @@
             "next": "https://api.spotify.com/v1/search?query=Bluebird&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 5913
+            "total": 5912
         }
     },
     {
@@ -7485,7 +7485,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Someone You Loved",
-                    "popularity": 90,
+                    "popularity": 91,
                     "preview_url": null,
                     "track_number": 4,
                     "type": "track",
@@ -7574,7 +7574,7 @@
                     "is_local": false,
                     "is_playable": false,
                     "name": "Dior",
-                    "popularity": 85,
+                    "popularity": 86,
                     "preview_url": null,
                     "restrictions": {
                         "reason": "explicit"
@@ -7588,7 +7588,7 @@
             "next": "https://api.spotify.com/v1/search?query=DIOR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 8618
+            "total": 8619
         }
     },
     {
@@ -7720,7 +7720,7 @@
             "next": "https://api.spotify.com/v1/search?query=MAMACITA&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 3025
+            "total": 3026
         }
     },
     {
@@ -7829,7 +7829,7 @@
             "next": "https://api.spotify.com/v1/search?query=Breaking+Me&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4270
+            "total": 4273
         }
     },
     {
@@ -7931,7 +7931,7 @@
             "next": "https://api.spotify.com/v1/search?query=Need+It&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 9338
+            "total": 9340
         }
     },
     {
@@ -8043,7 +8043,7 @@
             "next": "https://api.spotify.com/v1/search?query=Over+Now&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 7084
+            "total": 7085
         }
     },
     {
@@ -8145,7 +8145,7 @@
             "next": "https://api.spotify.com/v1/search?query=Don%E2%80%99t+Stop&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 36758
+            "total": 36766
         }
     },
     {
@@ -8421,7 +8421,7 @@
                     "is_local": false,
                     "is_playable": false,
                     "name": "You're Mines Still",
-                    "popularity": 59,
+                    "popularity": 60,
                     "preview_url": "https://p.scdn.co/mp3-preview/0f4f6cd9417fcb5a2ca354fafc2bf76cb4e20572?cid=9445bfc4e61f43ed83ec2782d464e42c",
                     "restrictions": {
                         "reason": "explicit"
@@ -8527,7 +8527,7 @@
             "next": "https://api.spotify.com/v1/search?query=Daisy&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 18016
+            "total": 18022
         }
     },
     {
@@ -8827,7 +8827,7 @@
             "next": "https://api.spotify.com/v1/search?query=Life+Goes+On&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 13860
+            "total": 13876
         }
     },
     {
@@ -9110,7 +9110,7 @@
             "next": "https://api.spotify.com/v1/search?query=Break+My+Heart&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 31014
+            "total": 31026
         }
     },
     {
@@ -9252,7 +9252,7 @@
             "next": "https://api.spotify.com/v1/search?query=Lemonade&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 9069
+            "total": 9073
         }
     },
     {
@@ -9341,7 +9341,7 @@
             "next": "https://api.spotify.com/v1/search?query=Forever+After+All&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 463
+            "total": 464
         }
     },
     {
@@ -9614,7 +9614,7 @@
             "next": "https://api.spotify.com/v1/search?query=positions&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4317
+            "total": 4318
         }
     },
     {
@@ -9703,7 +9703,7 @@
             "next": "https://api.spotify.com/v1/search?query=Dynamite&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 16432
+            "total": 16437
         }
     },
     {
@@ -9812,7 +9812,7 @@
             "next": "https://api.spotify.com/v1/search?query=Prisoner&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 12376
+            "total": 12379
         }
     },
     {
@@ -9996,7 +9996,7 @@
             "next": "https://api.spotify.com/v1/search?query=Tap+In&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 31036
+            "total": 31046
         }
     }
 ]
