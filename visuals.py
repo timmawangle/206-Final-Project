@@ -93,7 +93,7 @@ def bar_chart(cur, conn):
 
     ax.grid()
 
-    fig.savefig("difference_ranked_bar.png")
+    fig.savefig("RANKED_DIFF_BAR.png")
     plt.show()
 
 
