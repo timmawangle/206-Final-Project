@@ -174,7 +174,7 @@
             "next": "https://api.spotify.com/v1/search?query=Got+What+I+Got&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 6845
+            "total": 7170
         }
     },
     {
@@ -731,7 +731,7 @@
             "next": "https://api.spotify.com/v1/search?query=Go+Crazy&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 17463
+            "total": 17464
         }
     },
     {
@@ -820,7 +820,7 @@
             "next": "https://api.spotify.com/v1/search?query=Spider&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 51858
+            "total": 51870
         }
     },
     {
@@ -1018,7 +1018,7 @@
             "next": "https://api.spotify.com/v1/search?query=I+Hope&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 66932
+            "total": 66933
         }
     },
     {
@@ -1358,7 +1358,7 @@
             "next": "https://api.spotify.com/v1/search?query=For+The+Night&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 89822
+            "total": 83577
         }
     },
     {
@@ -1450,7 +1450,7 @@
             "next": "https://api.spotify.com/v1/search?query=Facts&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 15888
+            "total": 15889
         }
     },
     {
@@ -2063,7 +2063,7 @@
             "next": "https://api.spotify.com/v1/search?query=ROCKSTAR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 25550
+            "total": 25553
         }
     },
     {
@@ -3299,7 +3299,7 @@
             "next": "https://api.spotify.com/v1/search?query=Be+Like+That&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 9779
+            "total": 9599
         }
     },
     {
@@ -4323,7 +4323,7 @@
             "next": "https://api.spotify.com/v1/search?query=Roses&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 61947
+            "total": 61953
         }
     },
     {
@@ -6553,7 +6553,7 @@
             "next": "https://api.spotify.com/v1/search?query=Wishing+Well&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 4099
+            "total": 4100
         }
     },
     {
@@ -6662,7 +6662,7 @@
             "next": "https://api.spotify.com/v1/search?query=Rain+On+Me&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 30584
+            "total": 30169
         }
     },
     {
@@ -6754,7 +6754,7 @@
             "next": "https://api.spotify.com/v1/search?query=Say+So&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 44997
+            "total": 44998
         }
     },
     {
@@ -7588,7 +7588,7 @@
             "next": "https://api.spotify.com/v1/search?query=DIOR&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 8617
+            "total": 8618
         }
     },
     {
@@ -7931,7 +7931,7 @@
             "next": "https://api.spotify.com/v1/search?query=Need+It&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 9337
+            "total": 9338
         }
     },
     {
@@ -8527,7 +8527,7 @@
             "next": "https://api.spotify.com/v1/search?query=Daisy&type=track&market=US&offset=1&limit=1",
             "offset": 0,
             "previous": null,
-            "total": 18015
+            "total": 18016
         }
     },
     {
